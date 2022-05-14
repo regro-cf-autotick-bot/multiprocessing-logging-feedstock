@@ -1,17 +1,17 @@
 {% set name = "multiprocessing-logging" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://github.com/jruere/{{ name }}/archive/v{{ version }}.tar.gz"
-  sha256: 3490567a60f779576d481ce4bbdebe0dcf08c7392049823b72dcbf0fc26857b4
+  url: https://github.com/jruere/{{ name }}/archive/v{{ version }}.tar.gz
+  sha256: 4372709eedb496b7e8d38ced005a0a70daf8f54268c6aa19f46e4757c29d532c
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
   noarch: python
 
 requirements:
@@ -30,12 +30,12 @@ test:
     - pip check
 
 about:
-  home: "https://github.com/jruere/multiprocessing-logging"
-  license: "LGPL-3.0-only"
-  license_family: "LGPL"
-  license_file: "LICENSE.txt"
-  summary: "Python tooling to help logging work with multiprocessing"
-  dev_url: "https://github.com/jruere/multiprocessing-logging"
+  home: https://github.com/jruere/multiprocessing-logging
+  license: LGPL-3.0-only
+  license_family: LGPL
+  license_file: LICENSE.txt
+  summary: Python tooling to help logging work with multiprocessing
+  dev_url: https://github.com/jruere/multiprocessing-logging
 
 extra:
   recipe-maintainers:
