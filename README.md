@@ -146,4 +146,5 @@ Feedstock Maintainers
 =====================
 
 * [@jordan-heemskerk](https://github.com/jordan-heemskerk/)
+* [@phlya](https://github.com/phlya/)
 
