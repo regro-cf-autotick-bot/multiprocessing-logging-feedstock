@@ -1,6 +1,7 @@
 {% set name = "multiprocessing-logging" %}
 {% set version = "0.3.3" %}
 
+
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -39,4 +40,5 @@ about:
 
 extra:
   recipe-maintainers:
+    - phlya
     - jordan-heemskerk
