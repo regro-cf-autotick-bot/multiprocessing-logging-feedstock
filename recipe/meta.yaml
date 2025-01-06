@@ -11,22 +11,23 @@ source:
   sha256: 47f68007ceca4d385166f7214e957148e0262814c64bac892ebe5f2da7593fa3
 
 build:
-  number: 2
+  number: 3
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
   noarch: python
 
 requirements:
   host:
-    - python =2.7.* | >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python =2.7.* | >=3.6
+    - python >={{ python_min }}
 
 test:
   imports:
     - multiprocessing_logging
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
